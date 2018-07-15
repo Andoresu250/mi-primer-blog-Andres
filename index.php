@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Mi primer Blog Andres</title>
-</head>
-<body>
+<?php include ("menus/header.php");
+?>
 
-</body>
-</html>
+<h1>Noticias</h1>

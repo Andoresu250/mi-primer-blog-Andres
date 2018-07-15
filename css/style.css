@@ -1,0 +1,16 @@
+
+.log-in-form {
+  border: 1px solid #cacaca;
+  padding: 1rem;
+  border-radius: 0;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+body{
+	margin: 20px;
+}
+
+#showTable{
+	margin-top: 20px;
+}
