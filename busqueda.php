@@ -29,7 +29,7 @@ while ($row = mysqli_fetch_assoc($result)){
     $output .= '
 <div class="column">
 <div class="callout">'.utf8_encode($row['cuerpo']).
-'</p><p class="lead">'.$row['titulo'].
+'</p><p class="lead">'.utf8_encode($row['titulo']).
 '</p><p class="subheader">Autor: '.$row['user'].' Categoria: '.$row['nombre'].
 '</p></div>
 </div> ';

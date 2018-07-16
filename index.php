@@ -1,10 +1,4 @@
 <?php include ("menus/header.php");
-ini_set('display_errors', 1);
-require("includes/DbConnect.php");
-   
-   	$db = new DbConnect();
-
-	$con = $db->connect();
 ?>
 <h1>Noticias</h1>
 

@@ -47,12 +47,12 @@
 <form class="log-in-form" action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
   <h4 class="text-center">Login con tu correo asociado:</h4>
   <label>Email
-    <input type="email" name="email" placeholder="somebody@example.com">
+    <input type="email" name="email" placeholder="somebody@example.com" required>
   </label>
   <label>Contraseña
-    <input type="password" name="password" placeholder="Password">
+    <input type="password" name="password" placeholder="Password" required>
   </label>
-  <p><input type="submit" class="button expanded" value="Entrar"></input></p>
+  <p><input type="submit" class="button expanded" value="Entrar" ></input></p>
 </form>
 
 

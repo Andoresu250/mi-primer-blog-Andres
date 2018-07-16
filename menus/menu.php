@@ -7,7 +7,7 @@
   </div>
   <div class="top-bar-right">
     <ul class="menu">
-      <li class="menu-text" style="font-weight: bold;"><?php echo $user_check; ?></li><li><a href="#">Opciones</a></li><li><a href = "logout.php">Cerrar</a></li>
+      <li class="menu-text" style="font-weight: bold;"><?php echo $user_check; ?></li><li><a href="opciones.php">Opciones</a></li><li><a href = "logout.php">Cerrar</a></li>
     </ul>
   </div>
 </div>
