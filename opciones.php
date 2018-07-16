@@ -42,7 +42,7 @@ if(mysqli_num_rows($result) > 0)
 {
 while ($row = mysqli_fetch_assoc($result)){  
 	 
-	echo "<tr><td><b>".$row['titulo']."</b></td><td><a href='eliminar.php?delete=".$row['id_noti']."'><span style='color: red'> Eliminar</span></a><a href='#'><span style='color: green'> Editar</span></a></td></tr>";
+	echo "<tr><td><b>".$row['titulo']."</b></td><td><a href='eliminar.php?delete=".$row['id_noti']."'><span style='color: red'> Eliminar</span></a><a href='editar.php?id=".$row['id_noti']."'><span style='color: green'> Editar</span></a></td></tr>";
 	}
 }else{
 	echo "No tienes posts creados";
