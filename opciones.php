@@ -12,7 +12,7 @@ $db = new DbConnect();
 $con = $db->connect();
 
 $sql = "
- SELECT n.titulo, n.cuerpo, u.user, c.nombre 
+ SELECT n.id_noti, n.titulo, n.cuerpo, u.user, c.nombre 
     FROM noticias n inner join users u on (u.id=n.id_autor) inner join categorias c on (c.id_categoria=n.id_categoria)
     WHERE u.correo='$user_check'
  ";
@@ -42,7 +42,7 @@ if(mysqli_num_rows($result) > 0)
 {
 while ($row = mysqli_fetch_assoc($result)){  
 	 
-	echo "<tr><td><b>".$row['titulo']."</b></td><td><a href='#'><span style='color: red'> Eliminar</span></a><a href='#'><span style='color: green'> Editar</span></a></td></tr>";
+	echo "<tr><td><b>".$row['titulo']."</b></td><td><a href='eliminar.php?delete=".$row['id_noti']."'><span style='color: red'> Eliminar</span></a><a href='#'><span style='color: green'> Editar</span></a></td></tr>";
 	}
 }else{
 	echo "No tienes posts creados";
