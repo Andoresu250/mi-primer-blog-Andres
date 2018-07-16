@@ -1,5 +1,4 @@
 <?php 
-
 include ("menus/header.php");
 
 if (!$_SESSION) {

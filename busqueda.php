@@ -13,6 +13,14 @@ if(isset($_POST["query"]))
     FROM noticias n inner join users u on (u.id=n.id_autor) inner join categorias c on (c.id_categoria=n.id_categoria)
     WHERE n.titulo LIKE '%".$search."%'
  ";
+}else if(isset($_POST["categoria"])){
+	$cat = $_POST["categoria"];
+
+ $sql = "
+ SELECT n.titulo, n.cuerpo, u.user, c.nombre 
+    FROM noticias n inner join users u on (u.id=n.id_autor) inner join categorias c on (c.id_categoria=n.id_categoria)
+    WHERE n.id_categoria='".$cat."'
+ ";
 }
 else
 {
@@ -20,9 +28,12 @@ else
     FROM noticias n inner join users u on (u.id=n.id_autor) inner join categorias c on (c.id_categoria=n.id_categoria)
  ";
 }
+
 $result = mysqli_query($con,$sql);
 if(mysqli_num_rows($result) > 0)
-{
+{ 
+
+		
 while ($row = mysqli_fetch_assoc($result)){  
 
 
@@ -34,6 +45,7 @@ while ($row = mysqli_fetch_assoc($result)){
 '</p></div>
 </div> ';
    }
+
    echo $output;
   }
 else

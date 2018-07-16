@@ -1,8 +1,8 @@
 <?php
    include('session.php');
 ?>
-<html>
-   
+<!DOCTYPE html>
+<html>   
    <head>
       <title>Bienvenido <?php echo $user_check; ?></title>
       <meta charset="utf-8">
@@ -26,3 +26,4 @@
    <?php
 
    include("menu.php");
+
